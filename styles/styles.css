@@ -9,11 +9,10 @@ body {
 .container {
   width: 1200px;
   margin: 0px auto;
+  padding: 94px, 0px;
 }
 .section {
-  width: 1200px;
-  margin: auto;
-  padding: 94px, 0px;
+  margin: 0px auto;
 }
 .unstyled-list {
   list-style: none;
@@ -22,6 +21,8 @@ body {
 /*HeaderSection*/
 .container-header {
   background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
 }
 .header {
   background-color: #ffffff;
@@ -30,6 +31,8 @@ body {
   height: 80px;
   display: flex;
   border-bottom: 1px solid #ececec;
+  padding-left: 180px;
+  padding-right: 215px;
 }
 .logo {
   margin: 24px 93px 25px 15px;
@@ -140,7 +143,7 @@ body {
   object-fit: cover;
 }
 
-.hero-section {
+.section__hero {
   box-sizing: border-box;
   width: 100%;
   height: 600px;
@@ -148,7 +151,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.title-main {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
@@ -160,7 +163,7 @@ body {
   padding-top: 200px;
   margin-bottom: 30px;
 }
-.main-button {
+.hero__button {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
@@ -187,7 +190,7 @@ body {
   margin: 0px;
   padding: 94px 0px;
 }
-.objectives-item {
+.objectives-list__item {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
@@ -196,7 +199,7 @@ body {
   margin: 0px;
 }
 
-.objectives-explication {
+.objectives-list__explication {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
@@ -204,7 +207,7 @@ body {
   margin: 10px 0px 0px 0px;
 }
 
-.container-icon {
+.objectives-list__icon {
   display: flex;
   margin-bottom: 30px;
   width: 270px;
@@ -216,9 +219,9 @@ body {
 }
 
 /*JobSection*/
-.job-title,
-.team-title,
-.customer-title {
+.title__job,
+.team__title,
+.customers__title {
   text-align: center;
   font-size: 36px;
   line-height: 42px;
@@ -228,20 +231,20 @@ body {
   margin: 0px 0px 50px 0px;
 }
 
-.job-list {
+.job__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px;
   gap: 30px;
   margin: 0px;
-  padding: 0px 0px 94px 0px;
+  padding-bottom: 94px;
 }
-.job-list li {
+.job__list li {
   position: relative;
 }
 
-.name-apps {
+.job__apps {
   position: absolute;
   top: 224px;
   width: 370px;
@@ -262,26 +265,21 @@ body {
 /*TeamSection*/
 
 .container-team {
-  background-color: #f5f4fa;
-}
-.team-section {
   box-sizing: border-box;
   width: 100%;
-  height: 648px;
-  background-color: #f5f4fa;
   padding: 94px 0px;
-  margin: 0px auto;
+  background-color: #f5f4fa;
 }
 
-.member-list {
-  display: flex;
+.team__list {
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
   margin: 0px;
   padding: 0px;
+  display: flex;
 }
-.member-list-item {
+.team__item {
   box-sizing: border-box;
   width: 270px;
   height: 428px;
@@ -293,7 +291,7 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.name-item {
+.team__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -302,7 +300,7 @@ body {
   color: #212121;
 }
 
-.job-item {
+.team__job {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -310,15 +308,15 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
 }
-.sm-icons {
+.social-media__icons {
   display: flex;
   padding-top: 16px;
 }
-.sm-icons ul {
+.social-media__icons ul {
   display: flex;
   gap: 10px;
 }
-.icon-item {
+.icons__item {
   display: flex;
   width: 44px;
   height: 44px;
@@ -328,17 +326,29 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-item a {
+.icons__item a {
   display: flex;
   color: #afb1b8;
 }
 .team.icons {
   display: flex;
 }
-.icon-item svg {
+.icons__item svg {
   fill: currentColor;
 }
-.customers {
+.icons__svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icons__svg:hover {
+  fill: #ffffff;
+  cursor: pointer;
+}
+.icons__item:hover {
+  cursor: pointer;
+  background-color: #2196f3;
+}
+
+.container-customers {
   display: flex;
   height: 184;
   flex-direction: column;
@@ -346,14 +356,14 @@ body {
   justify-content: center;
   padding: 94px 0;
 }
-.list-customers {
+.customers__list {
   display: flex;
   gap: 30px;
   align-items: center;
   justify-content: center;
   padding-top: -44px;
 }
-.customer-item {
+.customers__item {
   display: flex;
   box-sizing: border-box;
   width: 170px;
@@ -365,7 +375,7 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customer-item:hover {
+.customers__item:hover {
   border-color: #2196f3;
   fill: #2196f3;
   cursor: pointer;
@@ -377,6 +387,8 @@ body {
 .footer {
   display: flex;
   gap: 93px;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-footer {
@@ -442,8 +454,7 @@ body {
   border-radius: 50%;
   transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.svg-footer-item:hover,
-.icon-item:hover {
+.svg-footer-item:hover {
   cursor: pointer;
   background-color: #2196f3;
 }
@@ -619,18 +630,18 @@ body {
   transform: translateY(-101%);
   overflow: visible;
 }
-.item-svg {
+.icons__svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.item-svg:hover {
+.icons__svg:hover {
   fill: #ffffff;
   cursor: pointer;
 }
-.item-svg-customer:hover {
+.customers__svg:hover {
   fill: #2196f3;
   cursor: pointer;
 }
-.item-svg-customer {
+.customers__svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
